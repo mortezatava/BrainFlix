@@ -1,0 +1,13 @@
+video{
+    width: 25vw;
+}
+.hero video{
+    width: 70vw;
+}
+
+.videoContainer {
+    display: flex;
+    __items {
+         flex-direction: row;
+    }
+}

@@ -1,0 +1,14 @@
+video {
+  width: 25vw;
+}
+
+.hero video {
+  width: 70vw;
+}
+
+.videoContainer {
+  display: flex;
+}
+.videoContainer __items {
+  flex-direction: row;
+}/*# sourceMappingURL=NextVideos.css.map */

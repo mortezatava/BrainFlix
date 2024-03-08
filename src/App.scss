@@ -2,18 +2,20 @@
   text-align: center;
 }
 
-.avatar {
+.avatar{
   width: 5%;
-  height: 5%;
+  height:5%;
   border-radius: 50%;
   margin-left: 3%;
 }
-
-video {
+video{
   margin-top: 5%;
 }
 
 .mainInfo {
   display: flex;
-  flex-direction: row;
-}/*# sourceMappingURL=App.css.map */
+flex-direction: row;
+  &__items{
+
+  }
+}
