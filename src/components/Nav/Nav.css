@@ -1,1 +1,25 @@
-/*# sourceMappingURL=Nav.css.map */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -2%;
+  padding-top: 0;
+}
+.nav-container .button {
+  background-color: #0095ff;
+  color: white;
+  padding: 1% 5%;
+  border-radius: 5%;
+  border: 1px solid gray;
+}
+.button {
+  display: flex;
+}
+
+.searchContainer {
+  border: 1px solid #e1e1e1;
+}
+.searchContainer .search {
+  border: 0;
+}/*# sourceMappingURL=Nav.css.map */

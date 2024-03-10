@@ -1,9 +1,15 @@
 video {
-  width: 25vw;
+  width: 18vw;
+  background-color: #000000;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero video {
-  width: 70vw;
+  width: 120vw;
+  height: 50vh;
+  max-width: 100%;
+  background-color: #000000;
 }
 
 .videoContainer {
@@ -11,4 +17,8 @@ video {
 }
 .videoContainer __items {
   flex-direction: row;
+}
+
+ul {
+  list-style: none;
 }/*# sourceMappingURL=NextVideos.css.map */

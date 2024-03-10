@@ -2,7 +2,7 @@ import './MainInfo.scss'
 import Comments from '../Comments/Comments'
 import NextVideos from '../NextVideos/NextVideos'
 
-function MainInfo() {
+function MainInfo({avatar}) {
     return (
         <div className='mainInfo'>
                 <section className='mainInfo__items'>
@@ -17,7 +17,7 @@ function MainInfo() {
                             Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier.
                         </p>
                     </div>
-                    <Comments/>
+                    <Comments avatar={avatar}/>
 
                 </section >
                 <NextVideos />

@@ -1,0 +1,70 @@
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1279px) {
+    @content();
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content();
+  }
+}
+
+@mixin tablet-and-desktop {
+  @include tablet {
+    @content;
+  }
+
+  @include desktop {
+    @content;
+  }
+}
+
+@mixin h1-desktop {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 44px;
+}
+
+@mixin h1-mobile {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin h3-bothscreens {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin h4-desktop {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin h4-mobile {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin p-desktop {
+  font-family: "Avenir Next Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin p-mobile {
+  font-family: "Avenir Next Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}

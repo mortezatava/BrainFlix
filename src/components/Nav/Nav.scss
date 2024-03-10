@@ -1,0 +1,28 @@
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+        align-items: center;
+    margin-top: -2%;
+    padding-top: 0;
+    .button {
+background-color: #0095ff;
+color: white;
+padding: 1% 5%;
+border-radius: 5%;
+border:1px solid gray;
+    }
+
+    &__items {
+
+    }
+}
+.button{
+    display: flex;
+}
+.searchContainer {
+    border: 1px solid #e1e1e1;
+    .search {
+        border: 0;
+    }
+}

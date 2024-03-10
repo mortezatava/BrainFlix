@@ -7,7 +7,7 @@ function NextVideos() {
             <ul>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>
@@ -20,49 +20,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
-                            <source src="" type="" />
-                        </video>
-
-                        <div className='videoContainer__items'>
-                            <h4>
-                                The Future of Artificial Intelligence
-                            </h4>
-                            <p> Aiden Thompson </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
-                            <source src="" type="" />
-                        </video>
-
-                        <div className='videoContainer__items' >
-                            <h4>
-                                The Future of Artificial Intelligence
-                            </h4>
-                            <p> Aiden Thompson </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
-                            <source src="" type="" />
-                        </video>
-
-                        <div className='videoContainer__items' >
-                            <h4>
-                                The Future of Artificial Intelligence
-                            </h4>
-                            <p> Aiden Thompson </p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image1.jpg "}>
                             <source src="" type="" />
                         </video>
 
@@ -76,7 +34,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image2.jpg"}>
                             <source src="" type="" />
                         </video>
 
@@ -90,7 +48,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image3.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>
@@ -103,7 +61,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image4.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>
@@ -116,7 +74,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image5.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>
@@ -129,7 +87,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image6.jpg"}>
                             <source src="" type="" />
                         </video>
 
@@ -143,7 +101,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image7.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>
@@ -156,7 +114,7 @@ function NextVideos() {
                 </li>
                 <li>
                     <div className='videoContainer'>
-                        <video className='videoContainer__items' controls poster=''>
+                        <video className='videoContainer__items' controls poster={"https://unit-3-project-api-0a5620414506.herokuapp.com/images/image8.jpg"}>
                             <source src="" type="" />
                         </video>
                         <div className='videoContainer__items'>

@@ -1,13 +1,26 @@
-video{
-    width: 25vw;
+video {
+    width: 18vw;
+    //  height: 8vh;
+    background-color: #000000;
+    object-fit: cover;
+
 }
-.hero video{
-    width: 70vw;
+
+.hero video {
+    width: 120vw;
+    height: 50vh;
+    max-width: 100%;
+    background-color: #000000;
 }
 
 .videoContainer {
     display: flex;
+
     __items {
-         flex-direction: row;
+        flex-direction: row;
     }
+}
+
+ul {
+    list-style: none;
 }

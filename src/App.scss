@@ -1,12 +1,13 @@
 .App {
   text-align: center;
+  padding: 4vw;
 }
-
 .avatar{
-  width: 5%;
-  height:5%;
+  position: relative;
+  width: 7vw;
+  height: 12vh;
+  margin-top: 1vh;
   border-radius: 50%;
-  margin-left: 3%;
 }
 video{
   margin-top: 5%;
