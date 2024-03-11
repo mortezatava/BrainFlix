@@ -1,54 +1,22 @@
 import './Comments.scss'
 
+import SingleComment from '../SingleComment/SingleComment'
 
-function Comments({avatar}) {
+
+function Comments({comments}) {
     return (
         <>
-            <div className='commentsContainer'>
+            <textarea name="comment">
+                Add a new comment
+            </textarea>
 
-                <h3>3 Comments</h3>
-                <img className="avatar" src= {avatar} alt="avatar" />
-                <label for="comment" >Join the conversation</label>
-
-                <textarea name="comment">
-                    Add a new comment
-                </textarea>
-
-                <div >
-                    <button type="submit" >Comment</button>
-                </div>
-
+            <div >
+                <button type="submit" >Comment</button>
             </div>
-            <div id="commentsContainer">
-                <div>
-                    <div className='comments-info'>
-                        <img src={avatar} className="avatar" alt="User Avatar" />
-                        <h3 className='name'>Noah Duncan</h3>
-                        <h4 className='timestamp'> 1691731062000 </h4>
-                    </div>
-                    <p className='comment'>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!</p>
-
-                </div>
-                <div>
-                    <div className='comments-info' >
-                        <img src={avatar} className="avatar" alt="User Avatar" />
-                        <h3 className='name'>Terry Wong</h3>
-                        <h4 className='timestamp'>1691644662000</h4>
-                    </div>
-                    <p className='comment'>This video is a fantastic overview of the AI landscape. Your ability to distill complex concepts into digestible content is impressive. Can't wait for more tech insights!</p>
-
-                </div>
-                <div>
-                    <div className='comments-info'>
-                        <img src={avatar} className="avatar" alt="User Avatar" />
-                        <h3 className='name'>Janice Rodriguez</h3>
-                        <h4 className='timestamp'>1691558262000</h4>
-                    </div>
-                    <p className='comment'>Your channel is my go-to source for staying updated on tech trends. The exploration of AI's future implications is both informative and exciting. Kudos on another excellent video!</p>
-
-                </div>
-            </div>
-
+            {comments.map(commentDetail =>
+                    <SingleComment key={commentDetail.id} name={commentDetail.name} comment={commentDetail.comment} avatar="" timePosted={commentDetail.timePosted}/>
+                )
+            }
         </>
     )
 }

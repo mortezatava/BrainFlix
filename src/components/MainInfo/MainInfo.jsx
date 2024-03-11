@@ -1,26 +1,33 @@
+import videoDetails from '../../assets/Data/video-details.json'
+import nextVideos from '../../assets/Data/videos.json'
+
+
 import './MainInfo.scss'
 import Comments from '../Comments/Comments'
 import NextVideos from '../NextVideos/NextVideos'
 
-function MainInfo({avatar}) {
+function MainInfo({avatar, handleSelect, selectedVideo}) {
+    
+    const selectedVideoDetails = videoDetails.find(videoDetail => videoDetail.title === selectedVideo);
+
     return (
         <div className='mainInfo'>
                 <section className='mainInfo__items'>
                     <div>
                         <h1>
-                            The Future of Artificial Intelligence
+                            {selectedVideo}
                         </h1>
                         <div>
-                            <h3> Aiden Thompson </h3>
+                            <h3>{selectedVideoDetails.channel}</h3>
                         </div>
                         <p>
-                            Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier.
+                            {selectedVideoDetails.description}
                         </p>
                     </div>
-                    <Comments avatar={avatar}/>
+                    <Comments comments={selectedVideoDetails.comments}/>
 
                 </section >
-                <NextVideos />
+                <NextVideos nextVideos={nextVideos} selectedVideoTitle={selectedVideo} onSelect={handleSelect}/>
             </div>
 
 )
