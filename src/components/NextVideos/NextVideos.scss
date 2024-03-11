@@ -6,6 +6,11 @@ video {
 
 }
 
+.nextVideos__title {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
 .videoContainer {
     display: flex;
@@ -17,4 +22,7 @@ video {
 
 ul {
     list-style: none;
+    padding-left: 5%;
 }
+
+

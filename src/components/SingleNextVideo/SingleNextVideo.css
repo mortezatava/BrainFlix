@@ -1,0 +1,23 @@
+.nextVideo-texts-container {
+  display: flex;
+  flex-direction: column;
+}
+.nextVideo-texts-container .next-video__title {
+  padding-left: 5%;
+  padding-top: 2%;
+  text-align: left;
+}
+.nextVideo-texts-container .next-video-info {
+  padding-left: 5%;
+  padding-top: 9%;
+  text-align: left;
+}
+
+ul {
+  padding-right: 5%;
+}
+
+.side-videos {
+  width: 50%;
+  height: auto;
+}/*# sourceMappingURL=SingleNextVideo.css.map */

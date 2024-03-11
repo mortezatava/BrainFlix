@@ -4,7 +4,7 @@ import './NextVideos.scss'
 import SingleNextVideo from "../SingleNextVideo/SingleNextVideo"
 
 
-function NextVideos({nextVideos, selectedVideoTitle, onSelect}) {
+function NextVideos({ nextVideos, selectedVideoTitle, onSelect }) {
 
     function handleClick(videoTitle) {
         onSelect(videoTitle)
@@ -14,9 +14,9 @@ function NextVideos({nextVideos, selectedVideoTitle, onSelect}) {
 
     return (
         <section className="nextVideos mainInfo__items">
-            <h3>Next Videos</h3>
+            <h4 className="nextVideos__title">Next Videos</h4>
             <ul>
-                {shownNextVideos.map(nextVideo => 
+                {shownNextVideos.map(nextVideo =>
                     <li key={nextVideo.id} onClick={e => handleClick(nextVideo.title)}>
                         <SingleNextVideo videoImage={nextVideo.image} videoTitle={nextVideo.title} videoChannel={nextVideo.channel} />
                     </li>
