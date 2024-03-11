@@ -7,20 +7,20 @@ import Comments from '../Comments/Comments'
 import NextVideos from '../NextVideos/NextVideos'
 
 function MainInfo({avatar, handleSelect, selectedVideo}) {
-    
+
     const selectedVideoDetails = videoDetails.find(videoDetail => videoDetail.title === selectedVideo);
 
     return (
         <div className='mainInfo'>
                 <section className='mainInfo__items'>
                     <div>
-                        <h1>
+                        <h1 className='mainInfo-title'>
                             {selectedVideo}
                         </h1>
                         <div>
-                            <h3>{selectedVideoDetails.channel}</h3>
+                            <h3 className='mainInfo-channel'>{selectedVideoDetails.channel}</h3>
                         </div>
-                        <p>
+                        <p className='mainInfo-description'>
                             {selectedVideoDetails.description}
                         </p>
                     </div>

@@ -12,6 +12,7 @@ import logo from './assets/Logo/BrainFlix-logo.svg'
 
 import './App.scss';
 
+
 function App() {
   return (
     <div className="App">

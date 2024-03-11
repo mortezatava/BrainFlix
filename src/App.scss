@@ -1,23 +1,39 @@
+@use './partials/mixins.scss';
 .App {
   text-align: center;
-  padding: 4vw;
+  // padding: 4vw;
 }
-.avatar{
-  position: relative;
-  width: 7vw;
-  height: 12vh;
-  margin-top: 1vh;
-  border-radius: 50%;
+
+h1 {
+  @include mixins.h1-mobile;
+  @include mixins.tablet-and-desktop {
+@include mixins.h1-desktop;
+    }
 }
-video{
+h3 {
+  @include mixins.h3-bothscreens;
+}
+h4 {
+  @include mixins.h4-mobile;
+  @include mixins.tablet-and-desktop {
+@include mixins.h4-desktop;
+    }
+}
+p {
+  @include mixins.p-mobile;
+  @include mixins.tablet-and-desktop {
+@include mixins.p-desktop;
+    }
+}
+
+video {
   margin-top: 5%;
 }
-
 .mainInfo {
   display: flex;
-flex-direction: column;
- 
-  &__items{
-
+  flex-direction: column;
+  @include mixins.tablet-and-desktop {
+    display: flex;
+    flex-direction: row;
   }
 }

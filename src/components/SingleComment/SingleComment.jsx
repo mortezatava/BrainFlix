@@ -1,10 +1,14 @@
-function SingleComment({name, comment, timePosted, avatar}) {
+import './SingleComment.scss';
+
+function SingleComment({ name, comment, timePosted, avatar }) {
     return (
         <div className='commentsContainer'>
-            <h3>{name}</h3>
-            <span>{timePosted}</span>
-            <div className="avatar" />
-            <label for="comment" >{comment}</label>
+            <div className="comments-lowerContainer">
+                <h3 className="comments__name">{name}</h3>
+                <span className="comments__timestamp">{timePosted}</span>
+                <div className="comments__avatar avatar" />
+            </div>
+            <p className="comments__comment" >{comment}</p>
         </div>
     )
 }

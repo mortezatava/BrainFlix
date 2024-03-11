@@ -1,14 +1,81 @@
 .App {
   text-align: center;
-  padding: 4vw;
 }
 
-.avatar {
-  position: relative;
-  width: 7vw;
-  height: 12vh;
-  margin-top: 1vh;
-  border-radius: 50%;
+h1 {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  h1 {
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+
+h3 {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+h4 {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  h4 {
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1280px) {
+  h4 {
+    font-family: "Avenir Next Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+p {
+  font-family: "Avenir Next Regular";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  p {
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1280px) {
+  p {
+    font-family: "Avenir Next Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 video {
@@ -17,5 +84,17 @@ video {
 
 .mainInfo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .mainInfo {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  .mainInfo {
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=App.css.map */

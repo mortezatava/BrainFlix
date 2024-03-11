@@ -1,6 +1,6 @@
 .nav-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin-top: -2%;
@@ -10,16 +10,51 @@
   background-color: #0095ff;
   color: white;
   padding: 1% 5%;
-  border-radius: 5%;
+  border-radius: 5px;
   border: 1px solid gray;
+}
+.nav-container .logo {
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 .button {
   display: flex;
+  width: 90%;
+}
+.button .button-text {
+  padding-left: 30%;
+  padding-top: 1.5%;
+}
+
+.searchAvatar-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-bottom: 5%;
+}
+.searchAvatar-container .avatar {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 7%;
 }
 
 .searchContainer {
   border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  width: 80%;
+  text-align: left;
 }
 .searchContainer .search {
   border: 0;
+}
+.searchContainer .search::-moz-placeholder {
+  color: #000000;
+}
+.searchContainer .search::placeholder {
+  color: #000000;
+}
+
+.lowerAvatar {
+  display: none;
 }/*# sourceMappingURL=Nav.css.map */

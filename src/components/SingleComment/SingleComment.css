@@ -1,0 +1,10 @@
+.comments-lowerContainer {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding-left: 5%;
+}
+.comments__comment {
+  text-align: left;
+  padding-left: 5%;
+}/*# sourceMappingURL=SingleComment.css.map */

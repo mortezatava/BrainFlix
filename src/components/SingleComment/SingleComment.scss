@@ -1,0 +1,18 @@
+.comments-lowerContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding-left: 5%;
+
+    .comments__name {}
+
+    .comments__timestamp {}
+
+    .comments__avatar {}
+}
+
+.comments__comment {
+    text-align: left;
+    padding-left: 5%;
+
+}
