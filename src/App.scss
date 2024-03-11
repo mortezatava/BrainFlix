@@ -32,7 +32,7 @@ video {
 .mainInfo {
   display: flex;
   flex-direction: column;
-  @include mixins.tablet-and-desktop {
+  @include mixins.desktop {
     display: flex;
     flex-direction: row;
   }

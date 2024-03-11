@@ -9,4 +9,11 @@
   text-align: left;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 5%;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.commentsContainer {
+  margin-left: 7%;
+  margin-right: 5%;
 }/*# sourceMappingURL=SingleComment.css.map */

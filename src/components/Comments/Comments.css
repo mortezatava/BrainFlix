@@ -9,9 +9,43 @@
   flex-flow: wrap;
   padding-left: 5%;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .commentsForm-container {
+    flex-direction: row;
+    flex-flow: nowrap;
+    padding-top: 0%;
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .commentsForm-container {
+    flex-direction: row;
+    flex-flow: nowrap;
+    padding-top: 0%;
+    padding-bottom: 5%;
+  }
+}
 .commentsForm-container .comments-form__input {
   width: 70%;
   border-radius: 5px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .commentsForm-container .comments-form__input {
+    width: 30%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 7%;
+  }
+}
+@media (min-width: 1280px) {
+  .commentsForm-container .comments-form__input {
+    width: 30%;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    padding-left: 8%;
+    padding-right: 7%;
+  }
 }
 .commentsForm-container .avatar {
   width: 10%;
@@ -19,6 +53,20 @@
   border-radius: 50%;
   margin-left: 5%;
   margin-right: 5%;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .commentsForm-container .avatar {
+    width: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 1280px) {
+  .commentsForm-container .avatar {
+    width: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+  }
 }
 .commentsForm-container .forms_submit {
   width: 70%;
@@ -32,6 +80,19 @@
   padding-right: 38%;
   border: 1px solid gray;
   border-radius: 5px;
+  background-color: #0095ff;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .commentsForm-container .forms_submit .submit-button {
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+  }
+}
+@media (min-width: 1280px) {
+  .commentsForm-container .forms_submit .submit-button {
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+  }
 }
 .commentsForm-container .forms_submit .submit-button img {
   margin-left: -137;
@@ -45,6 +106,17 @@
   padding-left: 5%;
 }
 
-comments-form__title {
+.comments-form__title {
   color: #e1e1e1;
+  margin-right: 9%;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments-form__title {
+    margin-right: 27%;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-form__title {
+    margin-right: 27%;
+  }
 }/*# sourceMappingURL=Comments.css.map */
