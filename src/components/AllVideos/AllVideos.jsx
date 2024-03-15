@@ -1,25 +1,42 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import Video from "../Video/Video";
+import axios from "axios";
+import './AllVideos.scss'
 
-import './AllVideos.scss';
-import Hero from '../Hero/Hero'
-import MainInfo from '../MainInfo/MainInfo';
+function AllVideos() {
+    const [nextVideos, setNextVideos] = useState(null);
+    const [selectedVideoTitle, setSelectedVideoTitle] = useState("");
+    useEffect(() => {
+        const fetchNextVideos = async () => {
+            try {
+                const response = await axios.get('https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=9469f23b-43db-439e-8362-db643e7f53a7');
+                setNextVideos(response.data);
+            } catch (error) {
+                console.error('Error fetching next videos:', error);
+            }
+        };
 
-import videos from '../../assets/Data/videos.json'
+        fetchNextVideos();
+    }, []);
 
-function AllVideos({avatar}) {
-    const [selectedVideo, setSelectedVideo] = useState('The Future of Artificial Intelligence');
-
-    function handleSelect(videoTitle) {
-        setSelectedVideo(videoTitle);
+    function handleClick(videoTitle) {
+        setSelectedVideoTitle(videoTitle);
     }
 
-    const selectedVideoInfo = videos.find(video => video.title === selectedVideo);
+    const allVideos = nextVideos?.filter(nextVideo => selectedVideoTitle !== nextVideo.title);
 
     return (
-        <>
-            <Hero videoImage={selectedVideoInfo.image}/>
-            <MainInfo avatar={avatar} selectedVideo={selectedVideo} handleSelect={handleSelect}/>
-        </>
-    );
+
+        <section className="nextVideos mainInfo__items">
+            <h4 className="nextVideos__title">Next Videos</h4>
+            <ul>
+                {allVideos?.map(video =>
+                    <Video key={video.id} video={video} handleClick={handleClick} />
+                )}
+            </ul>
+        </section>
+
+    )
 }
-export default AllVideos;
+
+export default AllVideos

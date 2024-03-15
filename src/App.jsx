@@ -1,23 +1,24 @@
 // import React, { useState } from 'react';
 import Nav from './components/Nav/Nav';
-
-import AllVideos from './components/AllVideos/AllVideos';
-
-
 import searchIcon from './assets/Icons/search.svg'
 import uploadIcon from './assets/Icons/upload.svg'
 import avatar from './assets/Images/Mohan-muruge.jpg'
 import logo from './assets/Logo/BrainFlix-logo.svg'
-
-
 import './App.scss';
+import HomePage from './components/HomePage/HomePage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 
 function App() {
   return (
     <div className="App">
       <Nav avatar={avatar} logo={logo} searchIcon={searchIcon} uploadIcon={uploadIcon} />
-      <AllVideos avatar={avatar} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/videos/:videoId" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

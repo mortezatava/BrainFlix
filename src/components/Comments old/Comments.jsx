@@ -1,7 +1,10 @@
-import Comment from "../Comment/Comment"
-import avatar from '../../assets/Images/Mohan-muruge.jpg'
+import './Comments.scss'
 import add_comment from '../../assets/Icons/add_comment.svg'
-function Comments(props) {
+import SingleComment from '../SingleComment/SingleComment'
+
+
+function Comments({ comments, avatar }) {
+
     return (
         <>
             <h4 className='comments-form__number'>3 Comments</h4>
@@ -19,12 +22,11 @@ function Comments(props) {
                     </button>
                 </div>
             </div>
-            {props.selectedVideoComments?.comments?.map(commentDetail =>
-                <Comment comment={commentDetail} />
+            {comments.map(commentDetail =>
+                <SingleComment key={commentDetail.id} name={commentDetail.name} comment={commentDetail.comment} avatar="" formattedDate={commentDetail.formattedDate} />
             )
             }
         </>
     )
 }
-
 export default Comments
