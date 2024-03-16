@@ -5,7 +5,7 @@ import './AllVideos.scss'
 
 function AllVideos() {
     const [nextVideos, setNextVideos] = useState(null);
-    const [selectedVideoTitle, setSelectedVideoTitle] = useState("");
+    const [selectedVideoTitle, setSelectedVideoTitle] = useState("The Future of Artificial Intelligence");
     useEffect(() => {
         const fetchNextVideos = async () => {
             try {
