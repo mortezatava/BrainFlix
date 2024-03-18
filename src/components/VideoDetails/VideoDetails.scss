@@ -1,9 +1,45 @@
-.hero{
+@use '../../partials/mixins.scss';
+
+.hero {
     margin-top: -2%;
+
+    @include mixins.tablet-and-desktop {
+        margin-top: -7%;
+    }
 }
+
 .hero video {
-    width: 100%;
+    width: 100vw;
     height: auto;
-    max-width: 100%;
+    // max-width: 100%;
     background-color: #000000;
+}
+
+.mainInfo-title {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+
+    @include mixins.tablet-and-desktop {
+        margin-top: 2%;
+    }
+}
+
+.mainIfo-channel-container {
+    border-bottom: 1px solid gray;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .mainInfo-channel {
+        text-align: left;
+        padding-right: 5%;
+        padding-left: 0;
+    }
+}
+
+.mainInfo-description {
+    text-align: left;
+    padding-right: 5%;
+    padding-left: 5%;
 }

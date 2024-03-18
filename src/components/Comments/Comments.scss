@@ -15,19 +15,22 @@
         flex-direction: row;
         flex-flow: nowrap;
         padding-top: 0%;
-        padding-bottom: 5%;
-
+        padding-bottom: 2%;
+        padding-left: 0;
+        border-bottom: 1px solid #e1e1e1;
+        margin-left: 5%;
 
     }
 
     .comments-form__input {
         width: 70%;
         border-radius: 5px;
+        border: 2px solid #e1e1e1;
 
         @include mixins.tablet-and-desktop {
             width: 30%;
-            margin-top: 7%;
-            margin-bottom: 5%;
+            margin-top: 0;
+            margin-bottom: 0;
             padding-left: 8%;
             padding-right: 7%;
         }
@@ -42,8 +45,9 @@
 
         @include mixins.tablet-and-desktop {
             width: 5%;
-            padding-top: 4%;
-            padding-bottom: 5%;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-left: 0;
 
         }
     }
@@ -54,11 +58,16 @@
         padding-top: 5%;
         padding-bottom: 5%;
 
+        @include mixins.tablet-and-desktop {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         .submit-button {
             display: flex;
             padding-left: 37%;
             padding-right: 38%;
-            border: 1px solid gray;
+            border: 1px solid #e1e1e1;
             border-radius: 5px;
             background-color: #0095ff;
 
@@ -81,13 +90,16 @@
 .comments-form__number {
     text-align: left;
     padding-left: 5%;
+    margin-bottom: 0;
 }
 
 .comments-form__title {
     color: #e1e1e1;
-    margin-right: 9%;
+    text-align: left;
+    padding-left: 24%;
 
     @include mixins.tablet-and-desktop {
         margin-right: 27%;
+        padding-left: 15%;
     }
 }

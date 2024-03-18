@@ -1,10 +1,10 @@
 import './SingleNextVideo.scss'
 
-function SingleNextVideo({videoImage, videoTitle, videoChannel}) {
+function SingleNextVideo({ videoImage, videoTitle, videoChannel }) {
 
     return (
         <div className='videoContainer'>
-            <video className='videoContainer__items side-videos' controls poster={videoImage}>
+            <video className='videoContainer__items side-videos' poster={videoImage}>
                 <source src="" type="" />
             </video>
             <div className='videoContainer__items nextVideo-texts-container'>

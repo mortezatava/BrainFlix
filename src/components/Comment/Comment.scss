@@ -1,3 +1,5 @@
+@use '../../partials/mixins.scss';
+
 .comments-lowerContainer {
     display: flex;
     flex-direction: row;
@@ -5,29 +7,60 @@
     padding-left: 5%;
     padding-right: 5%;
 
-    .comments__name {}
+    @include mixins.tablet-and-desktop {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 1%;
+        margin-left: -4%;
+    }
+
+    .comments__name {
+        margin-bottom: 0;
+
+        @include mixins.tablet-and-desktop {
+            margin-left: 2%;
+        }
+    }
 
     .comments__timestamp {}
 
-    .comments__comment {
-        text-align: left;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5%;
-        border-bottom: 2px solid #e1e1e1;
+    .comments__avatar {
+
+        width: 10%;
+        height: auto;
+        border-radius: 50%;
+        margin-left: 7%;
+        background-color: #e1e1e1;
+
+        @include mixins.tablet-and-desktop {
+            margin-left: -4%;
+            padding-left: 0;
+            padding-top: 4%;
+            padding-bottom: 2%;
+            width: 6%;
+        }
+
     }
 
-    .commentsContainer {
-        margin-left: 7%;
-        margin-right: 5%;
-    }
 }
 
-.avatar {
 
-    width: 10%;
-    height: auto;
-    border-radius: 50%;
+.commentsContainer {
     margin-left: 7%;
+    margin-right: 5%;
+}
 
+.comments__comment {
+    text-align: left;
+    padding-left: 23%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #e1e1e1;
+
+    @include mixins.tablet-and-desktop {
+        padding-left: 5%;
+
+    }
 }

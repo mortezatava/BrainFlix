@@ -1,4 +1,3 @@
-// import React, { useState } from 'react';
 import Nav from './components/Nav/Nav';
 import searchIcon from './assets/Icons/search.svg'
 import uploadIcon from './assets/Icons/upload.svg'
@@ -7,7 +6,6 @@ import logo from './assets/Logo/BrainFlix-logo.svg'
 import './App.scss';
 import HomePage from './components/HomePage/HomePage';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-
 
 function App() {
   return (

@@ -34,6 +34,6 @@ video {
   flex-direction: column;
   @include mixins.desktop {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
   }
 }
