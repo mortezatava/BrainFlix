@@ -5,6 +5,7 @@ import avatar from './assets/Images/Mohan-muruge.jpg'
 import logo from './assets/Logo/BrainFlix-logo.svg'
 import './App.scss';
 import HomePage from './components/HomePage/HomePage';
+import UploadPage from './UploadPage/UploadPage'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/videos/:videoId" element={<HomePage />} />
+          <Route path="/uploadPage" element={<UploadPage />} />
         </Routes>
       </BrowserRouter>
     </div>
