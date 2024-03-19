@@ -38,6 +38,7 @@ function UploadPage() {
 
         if (isVideoTitleValid(videoTitle) && isVideoDescriptionValid(videoDescription)) {
             alert("Uploaded Successfully");
+            window.location.href = "/";
         } else {
             alert("Failed to upload");
         }
@@ -51,17 +52,23 @@ function UploadPage() {
 
     return (
         <>
-            <h1>Upload Video</h1>
-            <h3>VIDEO THUMBNAIL</h3>
-            <img src={upload} alt='video-thumbnail' />
+            <h1 className='upload-heading'>Upload Video</h1>
+            <div className='upload-image__container' id='image-container'>
+                <h3 className='thumbnail-heading'>VIDEO THUMBNAIL</h3>
+                <img className='upload-image' src={upload} alt='video-thumbnail' />
+            </div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label className='video-title__label'>TITLE YOUR VIDEO</label>
-                    <input value={videoTitle} onChange={handleVideoTitle} type='text' id='video-title' name='videoTitle' placeholder='Add a title to your video'></input>
-                    <label className='video-description__label'>ADD A VIDEO DESCRIPTION</label>
-                    <input value={videoDescription} onChange={handleDescription} type='text' id='video-description' name='videoDescription' placeholder='Add a description to your video'></input>
-                    <button className='submit' type='submit'>PUBLISH</button>
-                    <button className='cancel' type='button' onClick={handleCancel}>CANCEL</button>
+                    <div className='form-upper-container' id='form-upper__container'>
+                        <label className='video-title__label form-items'>TITLE YOUR VIDEO</label>
+                        <input className='form-items' value={videoTitle} onChange={handleVideoTitle} type='text' id='video-title' name='videoTitle' placeholder='Add a title to your video'></input>
+                        <label className='video-description__label form-items'>ADD A VIDEO DESCRIPTION</label>
+                        <input className='form-items' value={videoDescription} onChange={handleDescription} type='text' id='video-description' name='videoDescription' placeholder='Add a description to your video'></input>
+                    </div>
+                    <div className='buttons'>
+                        <button className='submit form-items' type='submit'>PUBLISH</button>
+                        <button className='cancel form-items' type='button' onClick={handleCancel}>CANCEL</button>
+                    </div>
                 </form>
             </div>
         </>
