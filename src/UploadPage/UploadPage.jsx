@@ -6,7 +6,7 @@ import { useState } from 'react';
 function UploadPage() {
     const [videoTitle, setVideoTitle] = useState("");
     const [videoDescription, setVideoDescription] = useState("");
-    
+
     const handleVideoTitle = (event) => {
         setVideoTitle(event.target.value);
 
