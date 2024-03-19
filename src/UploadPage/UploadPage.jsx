@@ -9,10 +9,12 @@ function UploadPage() {
 
     const handleVideoTitle = (event) => {
         setVideoTitle(event.target.value);
+
     };
 
     const handleDescription = (event) => {
         setVideoDescription(event.target.value);
+
     };
 
     const isVideoTitleValid = (videoTitle) => {
@@ -38,6 +40,7 @@ function UploadPage() {
 
         if (isVideoTitleValid(videoTitle) && isVideoDescriptionValid(videoDescription)) {
             alert("Uploaded Successfully");
+            window.location.href = "/";
         } else {
             alert("Failed to upload");
         }
@@ -47,6 +50,7 @@ function UploadPage() {
         event.preventDefault();
         setVideoTitle("");
         setVideoDescription("");
+
     };
 
     return (

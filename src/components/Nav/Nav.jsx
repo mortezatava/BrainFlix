@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 
-function Nav({ avatar, logo, searchIcon}) {
+function Nav({ avatar, logo, searchIcon }) {
   return (
     <div className='nav-container'>
 
@@ -18,15 +18,12 @@ function Nav({ avatar, logo, searchIcon}) {
         </div>
         <img className="avatar searchAvatar" src={avatar} alt="avatar" />
       </div>
-
-      <button className='button nav-container__items'  >
+      <Link to="/uploadPage" className='button nav-container__items'>
         <img src={uploadIcon} alt="uploadIcon" />
         <span className="button-text">UPLOAD</span>
-      </button>
-      
+      </Link>
       <img className="avatar lowerAvatar" src={avatar} alt="avatar" />
     </div>
-
   )
 
 }
