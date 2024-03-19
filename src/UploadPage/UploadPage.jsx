@@ -6,13 +6,15 @@ import { useState } from 'react';
 function UploadPage() {
     const [videoTitle, setVideoTitle] = useState("");
     const [videoDescription, setVideoDescription] = useState("");
-
+    
     const handleVideoTitle = (event) => {
         setVideoTitle(event.target.value);
+
     };
 
     const handleDescription = (event) => {
         setVideoDescription(event.target.value);
+
     };
 
     const isVideoTitleValid = (videoTitle) => {
@@ -48,6 +50,7 @@ function UploadPage() {
         event.preventDefault();
         setVideoTitle("");
         setVideoDescription("");
+
     };
 
     return (

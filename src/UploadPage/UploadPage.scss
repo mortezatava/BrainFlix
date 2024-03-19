@@ -57,6 +57,14 @@ form {
         border-radius: 5px;
         color: black;
         background-color: #e1e1e1;
+
+        &:focus {
+            border-color: #0095ff;
+        }
+
+        &.error {
+            border-color: #d22d2d;
+        }
     }
 
     .video-title__label {
@@ -73,6 +81,14 @@ form {
         border-radius: 5px;
         color: black;
         background-color: #e1e1e1;
+
+        &:focus {
+            border-color: #0095ff;
+        }
+
+        &.error {
+            border-color: #d22d2d;
+        }
     }
 
     .video-description__label {

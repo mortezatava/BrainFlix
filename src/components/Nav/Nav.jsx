@@ -18,19 +18,12 @@ function Nav({ avatar, logo, searchIcon }) {
         </div>
         <img className="avatar searchAvatar" src={avatar} alt="avatar" />
       </div>
-
-      {/* <button className='button nav-container__items'  >
-        <img src={uploadIcon} alt="uploadIcon" />
-        <span className="button-text">UPLOAD</span>
-      </button> */}
       <Link to="/uploadPage" className='button nav-container__items'>
         <img src={uploadIcon} alt="uploadIcon" />
         <span className="button-text">UPLOAD</span>
       </Link>
-
       <img className="avatar lowerAvatar" src={avatar} alt="avatar" />
     </div>
-
   )
 
 }
