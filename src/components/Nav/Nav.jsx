@@ -9,7 +9,7 @@ function Nav({ avatar, logo, searchIcon }) {
   return (
     <div className='nav-container'>
 
-      <img className="logo nav-container__items" src={logo} alt="logo" />
+      <Link to="/"><img className="logo nav-container__items" src={logo} alt="logo" /></Link>
 
       <div className="searchAvatar-container">
         <div className='searchContainer nav-container__items'>
