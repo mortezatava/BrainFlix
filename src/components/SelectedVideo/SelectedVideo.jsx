@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 function SelectedVideo() {
     const [setSelectedVideoComments] = useState([]);
     const { videoId } = useParams();
-    console.log(videoId)
+    // console.log(videoId)
 
     return (
         <>

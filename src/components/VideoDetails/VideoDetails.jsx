@@ -10,7 +10,7 @@ function VideoDetails(props) {
         const fetchVideoDetails = async () => {
             try {
                 const currentVideoId = props.videoId || "84e96018-4022-434e-80bf-000ce4cd12b8"
-                const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${currentVideoId}?api_key=9469f23b-43db-439e-8362-db643e7f53a7`);
+                const response = await axios.get(`http://localhost:5050/videos/${currentVideoId}`);
                 console.log(response.data)
                 setVideoDetails(response.data);
 

@@ -5,12 +5,14 @@ import './AllVideos.scss'
 
 function AllVideos() {
     const [nextVideos, setNextVideos] = useState(null);
+    // const [nextVideos, setNextVideos] = useState([]);
     const [selectedVideoTitle, setSelectedVideoTitle] = useState("The Future of Artificial Intelligence");
     useEffect(() => {
         const fetchNextVideos = async () => {
             try {
-                const response = await axios.get('https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=9469f23b-43db-439e-8362-db643e7f53a7');
+                const response = await axios.get('http://localhost:5050/videos/');
                 setNextVideos(response.data);
+                console.log("allVideos data is here", response.data)
             } catch (error) {
                 console.error('Error fetching next videos:', error);
             }
