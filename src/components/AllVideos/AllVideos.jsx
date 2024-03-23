@@ -9,24 +9,19 @@ function AllVideos() {
     useEffect(() => {
         const fetchNextVideos = async () => {
             try {
-                const response = await axios.get('https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=9469f23b-43db-439e-8362-db643e7f53a7');
+                const response = await axios.get('http://localhost:5050/videos/');
                 setNextVideos(response.data);
             } catch (error) {
                 console.error('Error fetching next videos:', error);
             }
         };
-
         fetchNextVideos();
     }, []);
-
     function handleClick(videoTitle) {
         setSelectedVideoTitle(videoTitle);
     }
-
     const allVideos = nextVideos?.filter(nextVideo => selectedVideoTitle !== nextVideo.title);
-
     return (
-
         <section className="nextVideos mainInfo__items">
             <h4 className="nextVideos__title">Next Videos</h4>
             <ul>
@@ -35,8 +30,6 @@ function AllVideos() {
                 )}
             </ul>
         </section>
-
     )
 }
-
 export default AllVideos

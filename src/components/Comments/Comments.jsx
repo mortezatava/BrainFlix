@@ -1,4 +1,3 @@
-
 import './Comments.scss'
 import Comment from "../Comment/Comment"
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
@@ -14,24 +13,17 @@ function Comments(props) {
                 <textarea name="comment" className='comments-form__input' placeholder="Add a new comment">
                 </textarea>
                 <div className='forms_submit' >
-                <button type="submit" className='submit-button' >
-                    <img src={add_comment} alt="add-comment" />
-                    <span className="button-text">Comment</span>
-                </button>
+                    <button type="submit" className='submit-button' >
+                        <img src={add_comment} alt="add-comment" />
+                        <span className="button-text">Comment</span>
+                    </button>
+                </div>
             </div>
-            </div>
-
             <div className='comments-list'>
-
             </div>
-            {props.selectedVideoComments?.comments?.map(commentDetail =>
-                <Comment comment={commentDetail} />
-
-            )
-            }
+            {props.selectedVideoComments?.comments?.map((commentDetail, index) =>
+                <Comment key={index} comment={commentDetail} />)}
         </>
-
     )
 }
-
 export default Comments
