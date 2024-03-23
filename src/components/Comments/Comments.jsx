@@ -3,8 +3,7 @@ import Comment from "../Comment/Comment"
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 import add_comment from '../../assets/Icons/add_comment.svg'
 function Comments(props) {
-    console.log('selectedVideoComments:', props.selectedVideoComments);
-    console.log('comments:', props.selectedVideoComments?.comments);
+
     return (
         <>
             <h4 className='comments-form__number'>3 Comments</h4>
@@ -22,8 +21,8 @@ function Comments(props) {
             </div>
             <div className='comments-list'>
             </div>
-            {props.selectedVideoComments?.comments?.map((commentDetail,index) =>
-                <Comment key={index} comment={commentDetail} />) }
+            {props.selectedVideoComments?.comments?.map((commentDetail, index) =>
+                <Comment key={index} comment={commentDetail} />)}
         </>
     )
 }

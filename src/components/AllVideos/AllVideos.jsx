@@ -11,7 +11,6 @@ function AllVideos() {
             try {
                 const response = await axios.get('http://localhost:5050/videos/');
                 setNextVideos(response.data);
-                console.log("allVideos data is here", response.data)
             } catch (error) {
                 console.error('Error fetching next videos:', error);
             }
