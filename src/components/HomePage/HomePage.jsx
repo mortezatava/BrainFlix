@@ -4,15 +4,13 @@ import SelectedVideo from "../SelectedVideo/SelectedVideo"
 
 function HomePage() {
     return (
-
         <>
-
             <SelectedVideo />
             <AllVideos />
-
         </>
-
     )
 }
-
 export default HomePage
+
+
+

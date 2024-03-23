@@ -16,6 +16,7 @@ function App() {
         <Nav avatar={avatar} logo={logo} searchIcon={searchIcon} uploadIcon={uploadIcon} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          
           <Route path="/videos/:videoId" element={<HomePage />} />
           <Route path="/uploadPage" element={<UploadPage />} />
         </Routes>
