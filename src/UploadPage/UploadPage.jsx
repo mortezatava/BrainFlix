@@ -1,7 +1,10 @@
 
+
 import './UploadPage.scss';
 import upload from '../assets/Images/Upload-video-preview.jpg';
 import { useState } from 'react';
+import axios from 'axios';
+
 
 function UploadPage() {
     const [videoTitle, setVideoTitle] = useState("");
@@ -35,23 +38,44 @@ function UploadPage() {
         }
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         if (isVideoTitleValid(videoTitle) && isVideoDescriptionValid(videoDescription)) {
-            alert("Uploaded Successfully");
-            window.location.href = "/";
-        } else {
+            try {
+                const response = await axios.post("http://localhost:5050/videos", {
+                    title: videoTitle,
+                    description: videoDescription,
+                    channel: "Morteza's channel",
+                    image: "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image8.jpg",
+                    views: "0",
+                    likes: "0",
+                    duration: "00:00",
+                    video: "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+                    timestamp: Date.now(),
+                    comments: []
+                });
+                alert("Uploaded Successfully");
+                resetForm();
+                window.location.href = "/";
+            } catch (error) {
+                console.error("Error uploading video:", error);
+                alert("Failed to upload video. Please try again later.");
+            }
+        }
+        else {
             alert("Failed to upload");
         }
     };
 
     const handleCancel = (event) => {
         event.preventDefault();
-        setVideoTitle("");
-        setVideoDescription("");
+        resetForm();}
+        const resetForm = () => {
+            setVideoTitle("");
+            setVideoDescription("");
+        };
 
-    };
 
     return (
         <>
