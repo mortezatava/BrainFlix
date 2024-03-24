@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Comments from "../Comments/Comments";
 
 function VideoDetails(props) {
-    const [videoDetails, setVideoDetails] = useState(null); 
+    const [videoDetails, setVideoDetails] = useState(null);
 
     useEffect(() => {
         const fetchVideoDetails = async () => {
