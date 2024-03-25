@@ -3,6 +3,11 @@ import Comment from "../Comment/Comment"
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 import add_comment from '../../assets/Icons/add_comment.svg'
 function Comments(props) {
+    const formatTimestamp = (timestamp) => {
+        const date = new Date(timestamp);
+        const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+        return formattedDate;
+    };
     return (
         <>
             <h4 className='comments-form__number'>3 Comments</h4>
@@ -21,7 +26,7 @@ function Comments(props) {
             <div className='comments-list'>
             </div>
             {props.selectedVideoComments?.comments?.map((commentDetail, index) =>
-                <Comment key={index} comment={commentDetail} />)}
+                <Comment key={index} comment={commentDetail} formattedTime={formatTimestamp(commentDetail.timestamp)} />)}
         </>
     )
 }
