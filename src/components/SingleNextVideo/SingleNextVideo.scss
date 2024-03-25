@@ -11,7 +11,7 @@
         text-decoration: none;
 
         @include mixins.tablet-and-desktop {
-            margin-top: 35%;
+            margin-top: auto;
         }
     }
 
@@ -31,4 +31,15 @@ ul {
     height: auto;
     border-radius: 5px;
     object-fit: cover;
+}
+
+.nextVideos {
+    @include mixins.desktop {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: -60%;
+        margin-left: 65%;
+    }
+
 }
