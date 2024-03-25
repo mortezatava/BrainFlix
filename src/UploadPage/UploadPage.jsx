@@ -5,21 +5,17 @@ import upload from '../assets/Images/Upload-video-preview.jpg';
 import { useState } from 'react';
 import axios from 'axios';
 
-
 function UploadPage() {
     const [videoTitle, setVideoTitle] = useState("");
     const [videoDescription, setVideoDescription] = useState("");
-
     const handleVideoTitle = (event) => {
         setVideoTitle(event.target.value);
 
     };
-
     const handleDescription = (event) => {
         setVideoDescription(event.target.value);
 
     };
-
     const isVideoTitleValid = (videoTitle) => {
         if (typeof videoTitle === 'string' && videoTitle.trim().length >= 5 && videoTitle.trim().length <= 30) {
             return true;
@@ -28,7 +24,6 @@ function UploadPage() {
             return false;
         }
     };
-
     const isVideoDescriptionValid = (videoDescription) => {
         if (typeof videoDescription === 'string' && videoDescription.trim().length >= 10 && videoDescription.trim().length <= 150) {
             return true;
@@ -37,7 +32,6 @@ function UploadPage() {
             return false;
         }
     };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -67,7 +61,6 @@ function UploadPage() {
             alert("Failed to upload");
         }
     };
-
     const handleCancel = (event) => {
         event.preventDefault();
         resetForm();}
@@ -75,8 +68,6 @@ function UploadPage() {
             setVideoTitle("");
             setVideoDescription("");
         };
-
-
     return (
         <>
             <h1 className='upload-heading'>Upload Video</h1>

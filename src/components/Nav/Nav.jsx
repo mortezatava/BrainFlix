@@ -3,8 +3,6 @@ import uploadIcon from '../../assets/Icons/upload.svg'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 function Nav({ avatar, logo, searchIcon }) {
   return (
     <div className='nav-container'>

@@ -10,5 +10,4 @@ function Video(props) {
         </Link>
     )
 }
-
 export default Video
