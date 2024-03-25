@@ -32,12 +32,16 @@ function UploadPage() {
             return false;
         }
     };
+    const resetForm = () => {
+        setVideoTitle("");
+        setVideoDescription("");
+    };
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         if (isVideoTitleValid(videoTitle) && isVideoDescriptionValid(videoDescription)) {
             try {
-                const response = await axios.post("http://localhost:5050/videos", {
+                await axios.post("http://localhost:5050/videos", {
                     title: videoTitle,
                     description: videoDescription,
                     channel: "Morteza's channel",
@@ -63,11 +67,9 @@ function UploadPage() {
     };
     const handleCancel = (event) => {
         event.preventDefault();
-        resetForm();}
-        const resetForm = () => {
-            setVideoTitle("");
-            setVideoDescription("");
-        };
+        resetForm();
+    }
+
     return (
         <>
             <h1 className='upload-heading'>Upload Video</h1>
