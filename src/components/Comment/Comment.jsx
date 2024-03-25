@@ -6,13 +6,10 @@ function Comment(props) {
             <div className="comments-lowerContainer">
                 <div className="comments__avatar avatar"></div>
                 <h3 className="comments__name">{props.comment.name}</h3>
-                <span className="comments__timestamp">{props.comment.formattedTime}</span>
+                <p className="comments__timestamp">{props.formattedTime}</p>
             </div>
             <p className="comments__comment" >{props.comment.comment}</p>
         </div>
     )
 }
 export default Comment
-
-
-
